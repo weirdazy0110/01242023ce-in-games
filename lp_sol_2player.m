@@ -12,7 +12,7 @@ close all;
 %% PARAMETERS
 % payoff matrix
 P1 = [0,5,4;4,0,5;5,4,0];
-P2 = [0,4,5;5,0,4;4,5,0];
+P2 = [0,4,5;5,0,4;4,5,0]';
 
 % number of prob we need to solve
 n = size(P1,1)*size(P1,2);
@@ -62,7 +62,3 @@ b = zeros(1,size(A,1));
 
 % for the max problem
 [x_max,f_max] = linprog(-f,A,b,Aeq,beq,lb);
-
-%% 
-A = [1 2 3
-    2 2 2]
